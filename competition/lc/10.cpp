@@ -3,6 +3,7 @@
 #include <string>
 using namespace std;
 
+std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
 
 int main() {
     /*
