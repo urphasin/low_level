@@ -1,6 +1,17 @@
 #include <iostream>
 #include <cmath>
 #include <string>
+#include <algorithm>
+#include <vector>
+#include <stack>
+#include <queue>
+#include <list>
+#include <set>
+#include <unordered_set>
+#include <limits>
+#include <unordered_map>
+#include <map>
+
 using namespace std;
 
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x      );
