@@ -22,11 +22,16 @@
 #include <numeric>
 #include <functional>
 #include <utility>
-
 using namespace std;
 
+
+// PROTOTYPES
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
 
+
+
+
+// MAIN
 int main() {
     /*
     unsigned __int128 is a compiler extension (mainly GCC/Clang), 
@@ -40,6 +45,8 @@ int main() {
     return 0;
 }
 
+
+// DEFINITIONS
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
     if (x == 0) {
         os << '0';
@@ -58,3 +65,36 @@ std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
     os << s;
     return os;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
