@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <cmath>
 #include <string>
 #include <algorithm>
@@ -11,10 +12,12 @@
 #include <limits>
 #include <unordered_map>
 #include <map>
+#include <bit>
+#include <bitset>
 
 using namespace std;
 
-std::ostream& operator<<(std::ostream& os, unsigned __int128 x                          );
+std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
 
 int main() {
     /*
