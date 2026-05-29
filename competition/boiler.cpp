@@ -31,3 +31,22 @@ int main() {
 
     return 0;
 }
+
+std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
+    if (x == 0) {
+        os << '0';
+        return os;
+    }
+
+    std::string s;
+
+    while (x > 0) {
+        s += '0' + (x % 10);
+        x /= 10;
+    }
+
+    std::reverse(s.begin(), s.end());
+
+    os << s;
+    return os;
+}
