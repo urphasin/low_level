@@ -3,17 +3,23 @@
 #include <cmath>
 #include <string>
 #include <algorithm>
+#include <array>
 #include <vector>
+#include <tuple>
 #include <stack>
 #include <queue>
+#include <deque>
 #include <list>
 #include <set>
 #include <unordered_set>
-#include <limits>
 #include <unordered_map>
 #include <map>
 #include <bit>
 #include <bitset>
+#include <limits>
+#include <numeric>
+#include <functional>
+#include <utility>
 
 using namespace std;
 
