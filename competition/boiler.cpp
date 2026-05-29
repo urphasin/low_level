@@ -1,4 +1,6 @@
 #include <iostream>
+#include <random>
+#include <cstring>
 #include <iomanip>
 #include <cmath>
 #include <string>
