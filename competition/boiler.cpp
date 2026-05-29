@@ -24,5 +24,7 @@ int main() {
     */
     unsigned __int128 x = 4;
 
+    std::cout << x << std::endl;
+
     return 0;
 }
