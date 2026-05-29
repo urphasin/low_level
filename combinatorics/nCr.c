@@ -8,7 +8,7 @@ long long nCr(int n, int r) {
 
     long long result = 1;
     for (int i = 0, j = r; i < r; i++, j--) {
-        result = result * (n - i) / j;
+        result = (result / j) * (n - i);
     }
 
     return result;

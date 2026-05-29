@@ -1,0 +1,4 @@
+echo 'alias g++=/opt/homebrew/bin/g++-15' >> ~/.zshrc
+echo 'alias gcc=/opt/homebrew/bin/gcc-15' >> ~/.zshrc
+source ~/.zshrc
+
