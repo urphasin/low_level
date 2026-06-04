@@ -7,6 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 find_package(SFML 3 CONFIG REQUIRED COMPONENTS Graphics Window System)
 
 add_executable(game main.cpp)
+add_executable(eigen 001Eigen.cpp)
 
 # Link against the individual components
 target_link_libraries(game
@@ -14,4 +15,10 @@ target_link_libraries(game
         SFML::Graphics
         SFML::Window
         SFML::System
+)
+
+target_include_directories(eigen 
+    PRIVATE
+        /Users/root1/Downloads/eigen
+
 )
