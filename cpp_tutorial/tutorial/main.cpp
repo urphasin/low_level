@@ -1,38 +1,127 @@
 #include <iostream>
+// #include <random>
+#include <cstring>
+#include <iomanip>
+#include <cmath>
+#include <string>
+#include <algorithm>
+#include <array>
+#include <vector>
+// #include <tuple>
+#include <stack>
+#include <queue>
+#include <deque>
+// #include <list>
 #include <set>
+#include <unordered_set>
+#include <unordered_map>
+#include <map>
+// #include <bit>
+#include <bitset>
+#include <limits>
+#include <numeric>
+#include <functional>
+#include <utility>
+#include <SFML/Graphics.hpp>
+using namespace std;
 
-void funcA() {
-    // Make set A
-    std::set<int> A{10, 20, 30, 34, 40, 100};
-    A.insert("54");
+/*
+POST SUBMISSION QUESTIONS:
 
-    // Print set A
-    std::set<int>::iterator it = A.begin();
-    for( ; it != A.end(); it++ ) {
-        std::cout << *it << " ";
-    }
+1.  
 
-    std::cout << std::endl;
-}
+*/
 
-void funcB() {
-    // Make set B
-    std::set< int, std::greater<int> > B{10, 20, 30, 34, 40, 100};
-    
-    // Print set B
-    std::set<int>::iterator it = B.begin();
-    for( ; it != B.end(); it++ ) {
-        std::cout << *it << " ";
-    }
 
-    std::cout << std::endl;
-}
 
+// PROTOTYPES
+std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
+
+
+// CLASSES AND STRUCTURES
+
+
+
+
+// MAIN
 int main() {
+    /*
+    unsigned __int128 is a compiler extension (mainly GCC/Clang), 
+    not a standard C++ integer type, 
+    so the standard stream operators (<<) were never overloaded for it.
+    */
+    unsigned __int128 x = 4;
+    std::cout << x << std::endl;
 
-    funcA();
-    funcB();
 
-    std::cout << "\n";
-    std::cout << std::endl;
+    sf::RenderWindow window(sf::VideoMode({800, 600}), "SFML Works!");
+
+    while (window.isOpen()) {
+
+        while (const std::optional event = window.pollEvent()) {
+            if (event->is<sf::Event::Closed>()) {
+                window.close();
+            }
+        }
+
+        window.clear(sf::Color::Black);
+        window.display();
+    }
+
+
+    return 0;
 }
+
+
+// DEFINITIONS
+std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
+    if (x == 0) {
+        os << '0';
+        return os;
+    }
+
+    std::string s;
+
+    while (x > 0) {
+        s += '0' + (x % 10);
+        x /= 10;
+    }
+
+    std::reverse(s.begin(), s.end());
+
+    os << s;
+    return os;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

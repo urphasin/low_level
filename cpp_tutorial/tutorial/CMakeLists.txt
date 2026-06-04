@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.20)
+project(game)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# Specify the required components here
+find_package(SFML 3 CONFIG REQUIRED COMPONENTS Graphics Window System)
+
+add_executable(game main.cpp)
+
+# Link against the individual components
+target_link_libraries(game
+    PRIVATE
+        SFML::Graphics
+        SFML::Window
+        SFML::System
+)
