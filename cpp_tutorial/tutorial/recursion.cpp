@@ -79,7 +79,8 @@ std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
 }
 
 template<typename T>
-T BinarySearch(vector<T> &arr, T target) {
+requires std::is_arithmetic_v<T>
+int BinarySearch(vector<T> &arr, T target) {
 
 }
 
