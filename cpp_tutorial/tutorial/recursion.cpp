@@ -1,4 +1,5 @@
 #include <iostream>
+#include <type_traits>
 // #include <random>
 #include <cstring>
 #include <iomanip>
@@ -77,6 +78,10 @@ std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
     return os;
 }
 
+template<typename T>
+T BinarySearch(vector<T> &arr, T target) {
+
+}
 
 
 
