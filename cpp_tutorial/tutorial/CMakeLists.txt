@@ -8,6 +8,7 @@ find_package(SFML 3 CONFIG REQUIRED COMPONENTS Graphics Window System)
 
 add_executable(game main.cpp)
 add_executable(eigen 001Eigen.cpp)
+add_executable(ans recursion.cpp)
 
 # Link against the individual components
 target_link_libraries(game
