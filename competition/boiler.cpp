@@ -39,7 +39,13 @@ POST SUBMISSION QUESTIONS:
 
 // PROTOTYPES
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
-
+template <typename OP>
+void print_vector(vector<OP> arr) {
+    for (auto i : arr) {
+        std::cout << i << ", ";
+    }
+    std::endl;
+}
 
 
 // MAIN

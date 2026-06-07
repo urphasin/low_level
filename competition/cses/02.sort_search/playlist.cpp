@@ -39,6 +39,13 @@ POST SUBMISSION QUESTIONS:
 
 // PROTOTYPES
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
+template <typename OP>
+void print_vector(vector<OP> arr) {
+    for (auto i : arr) {
+        std::cout << i << ", ";
+    }
+    std::endl;
+}
 
 
 
@@ -55,8 +62,11 @@ int main() {
     int n;
     std::cin >> n;
 
+    std::vector<int> playlist;
     while(n--) {
-
+        int k;
+        std::cin >> k;
+        playlist.push_back(k);
     }
 
 
