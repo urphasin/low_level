@@ -45,7 +45,12 @@ void print_vector(vector<OP> arr) {
     for (auto i : arr) {
         std::cout << i << ", ";
     }
-    std::endl;
+    std::cout<<std::endl;
+    for (size_t i{0}; i < arr.size(); i++)
+    {
+        std::cout << i << ", ";
+    }
+    std::cout << std::endl;
 }
 
 

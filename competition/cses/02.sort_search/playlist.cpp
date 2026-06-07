@@ -46,12 +46,20 @@ void print_vector(vector<OP> arr) {
         std::cout << i << ", ";
     }
     std::cout<<std::endl;
+    for(size_t i{0}; i < arr.size(); i++) {
+        std::cout << i << ", ";
+    }
+    std::cout << std::endl;
 }
 
 template <typename OP>
-void print_vector(int size, OP *arr) {
+void print_array(int size, OP *arr) {
     for(int i = 0; i < size; i++) {
         std::cout << arr[size] << ", ";
+    }
+    std::cout << std::endl;
+    for(size_t o{0}; o < size; o++) {
+        std::cout << o << ", ";
     }
     std::cout << std::endl;
 }
@@ -91,6 +99,7 @@ int main() {
     // std::cout << x << std::endl;
 
     int scores[10];
+    print_array(10, scores);
     
     
     return 0;
