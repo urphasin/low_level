@@ -78,14 +78,14 @@ void solve() {
     int n;
     std::cin >> n;
 
-    std::vector<int> playlist;
+    std::vector<long> playlist;
     while(n--) {
-        int k;
+        long k;
         std::cin >> k;
         playlist.push_back(k);
     }
 
-    int Ls = 0;
+    long Ls = 0;
 
 }
 
