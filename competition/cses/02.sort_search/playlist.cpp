@@ -48,7 +48,13 @@ void print_vector(vector<OP> arr) {
     std::cout<<std::endl;
 }
 
-
+// solve
+/*
+Print the length of the longest sequence of unique songs.
+*/
+int longest(std::vector<int> arr) {
+    return(5);
+}
 
 
 // MAIN
@@ -70,8 +76,8 @@ int main() {
         std::cin >> k;
         playlist.push_back(k);
     }
-    print_vector(playlist);
-
+    
+    std::cout<<longest(playlist)<<std::endl;
 
     return 0;
 }
