@@ -50,13 +50,13 @@ int main() {
     so the standard stream operators (<<) were never overloaded for it.
     */
     unsigned __int128 x = 4;
-    std::cout << x << std::endl;
+    // std::cout << x << std::endl;
 
     int n;
     std::cin >> n;
 
     while(n--) {
-        
+
     }
 
 
