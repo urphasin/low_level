@@ -48,8 +48,18 @@ void print_vector(vector<OP> arr) {
     std::endl;
 }
 
-// solve
 
+template <typename OP>
+void print_vector(int size, OP *arr) {
+    for(int i = 0; i < size; i++) {
+        std::cout << arr[size] << ", ";
+    }
+    std::cout << std::endl;
+}
+// solve
+void solve() {
+
+}
 
 
 // MAIN
