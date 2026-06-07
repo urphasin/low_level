@@ -78,11 +78,11 @@ std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
     return os;
 }
 
-template<typename T>
-requires std::is_arithmetic_v<T>
-int BinarySearch(vector<T> &arr, T target) {
-
-}
+// template<typename T>
+// requires std::is_arithmetic_v<T>
+// int BinarySearch(vector<T> &arr, T target) {
+//     return 0;
+// }
 
 
 
