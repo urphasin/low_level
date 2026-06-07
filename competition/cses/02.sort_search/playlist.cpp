@@ -52,7 +52,12 @@ int main() {
     unsigned __int128 x = 4;
     std::cout << x << std::endl;
 
+    int n;
+    std::cin >> n;
 
+    while(n--) {
+        
+    }
 
 
     return 0;
