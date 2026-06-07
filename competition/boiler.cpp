@@ -53,7 +53,6 @@ void print_vector(vector<OP> arr) {
     std::cout << std::endl;
 }
 
-
 template <typename OP>
 void print_vector(int size, OP *arr) {
     for(int i = 0; i < size; i++) {
