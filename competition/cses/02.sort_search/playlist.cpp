@@ -44,7 +44,7 @@ void print_vector(vector<OP> arr) {
     for (auto i : arr) {
         std::cout << i << ", ";
     }
-    std::endl;
+    std::cout<<std::endl;
 }
 
 
@@ -68,6 +68,7 @@ int main() {
         std::cin >> k;
         playlist.push_back(k);
     }
+    print_vector(playlist);
 
 
     return 0;

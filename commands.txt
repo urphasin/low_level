@@ -2,9 +2,16 @@ echo 'alias g++=/opt/homebrew/bin/g++-15' >> ~/.zshrc
 echo 'alias gcc=/opt/homebrew/bin/gcc-15' >> ~/.zshrc
 source ~/.zshrc
 
+
+
 # Remove the existing build directory
 rm -rf build
 
 # Re-configure and build
 cmake -S . -B build
 cmake --build build
+
+
+
+
+g++ playlist.cpp -o ans.out -std=c++20
