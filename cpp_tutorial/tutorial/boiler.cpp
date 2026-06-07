@@ -1,5 +1,5 @@
 #include <iostream>
-#include <type_traits>
+// #include <type_traits> // c++20
 // #include <random>
 #include <cstring>
 #include <iomanip>
@@ -37,17 +37,8 @@ POST SUBMISSION QUESTIONS:
 
 
 
-
-
-
-
-
 // PROTOTYPES
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
-
-
-
-
 
 
 
