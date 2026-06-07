@@ -68,13 +68,13 @@ void print_array(int size, OP *arr) {
 /*
 Print the length of the longest sequence of unique songs.
 */
-int longest(std::vector<int> &arr) {
-    for (size_t i{0}; i < arr.size(); i++) {
-        arr[i] = i + 20;
-    }
-    return 5;
-}
+
 void solve() {
+    /*
+        8
+        7 8 9 7 2 8 1 2
+        5
+    */
     int n;
     std::cin >> n;
 
@@ -84,6 +84,8 @@ void solve() {
         std::cin >> k;
         playlist.push_back(k);
     }
+
+    int Ls = 0;
 
 }
 
