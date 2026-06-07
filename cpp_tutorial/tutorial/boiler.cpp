@@ -40,6 +40,40 @@ POST SUBMISSION QUESTIONS:
 // PROTOTYPES
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
 
+template <typename OP>
+void print_vector(vector<OP> arr) {
+    for (auto i : arr) {
+        std::cout << i << ", ";
+    }
+    std::cout<<std::endl;
+    for (size_t i{0}; i < arr.size(); i++)
+    {
+        std::cout << i << ", ";
+    }
+    std::cout << std::endl;
+}
+
+template <typename OP>
+void print_array(int size, OP *arr) {
+    for(int i = 0; i < size; i++) {
+        std::cout << arr[size] << ", ";
+    }
+    std::cout << std::endl;
+}
+
+template <typename O, typename P>
+void print_unordered_map(std::unordered_map<O, P> table) {
+    for(auto i = table.begin(); i != table.end(); i++) {
+        std::cout << i->first << " : " << i->second << std::endl;
+    }
+    std::cout << std::endl;
+}
+
+
+// solve
+void solve() {
+
+}
 
 
 // MAIN
@@ -50,7 +84,7 @@ int main() {
     so the standard stream operators (<<) were never overloaded for it.
     */
     unsigned __int128 x = 4;
-    std::cout << x << std::endl;
+    // std::cout << x << std::endl;
 
 
 
