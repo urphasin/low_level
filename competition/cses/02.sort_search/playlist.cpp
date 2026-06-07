@@ -53,6 +53,9 @@ void print_vector(vector<OP> arr) {
 Print the length of the longest sequence of unique songs.
 */
 int longest(std::vector<int> arr) {
+    for (size_t i{0}; i < 10; i++) {
+        
+    }
     return(5);
 }
 
