@@ -64,6 +64,15 @@ void print_array(int size, OP *arr) {
     std::cout << std::endl;
 }
 
+template <typename O, typename P>
+void print_unordered_map(std::unordered_map<O, P> table) {
+    for(auto i = table.begin(); i != table.end(); i++) {
+        std::cout << i->first << " : " << i->second << std::endl;
+    }
+    std::cout << std::endl;
+}
+
+
 // solve
 /*
 Print the length of the longest sequence of unique songs.
@@ -99,10 +108,11 @@ int main() {
     */
     unsigned __int128 x = 4;
     // std::cout << x << std::endl;
-
-    int scores[10];
-    print_array(10, scores);
     
+    std::unordered_map<string, double> constants;
+    constants.insert(make_pair("morning", 12.30));
+
+    print_unordered_map(constants);
     
     return 0;
 }

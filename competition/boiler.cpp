@@ -54,12 +54,22 @@ void print_vector(vector<OP> arr) {
 }
 
 template <typename OP>
-void print_vector(int size, OP *arr) {
+void print_array(int size, OP *arr) {
     for(int i = 0; i < size; i++) {
         std::cout << arr[size] << ", ";
     }
     std::cout << std::endl;
 }
+
+template <typename O, typename P>
+void print_unordered_map(std::unordered_map<O, P> table) {
+    for(auto i = table.begin(); i != table.end(); i++) {
+        std::cout << i->first << " : " << i->second << std::endl;
+    }
+    std::cout << std::endl;
+}
+
+
 // solve
 void solve() {
 
