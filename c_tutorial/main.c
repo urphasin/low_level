@@ -10,7 +10,7 @@ void printIntArray(int* arr, size_t size) {
 }
 
 int main() {
-    int* arr = (int*)malloc(sizeof(int) * 10);
+    int* arr = malloc(sizeof(int) * 10);
     printIntArray(arr, 10);
     free(arr);
 }
