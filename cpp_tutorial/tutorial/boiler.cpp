@@ -1,6 +1,6 @@
 #include <sstream>
 #include <iostream>
-#include <type_traits>
+// #include <type_traits> // c++20
 // #include <random>
 #include <cstring>
 #include <iomanip>
@@ -24,6 +24,7 @@
 #include <numeric>
 #include <functional>
 #include <utility>
+#include <memory>
 using namespace std;
 
 /*
@@ -34,15 +35,33 @@ POST SUBMISSION QUESTIONS:
 */
 
 
+// CONSTANTS
+const double pi = M_PI;
+const std::string endColor = "\x1b[0m";
+const std::string yellow = "\x1b[1;93m";
 
-// CLASSES AND STRUCTURES
 
+// Default Classes and Structs
+struct Fraction {
+    long long num;
+    long long den;
+};
 
+// New Classes and Structs
 
+//##############################
 
-
-// PROTOTYPES
+// Default Prototypes
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x);
+std::ostream& operator<<(std::ostream& os, Fraction f);
+Fraction limit_denominator(double value, long long max_den = 1'000'000L);
+
+// New Prototypes
+
+
+//##############################
+
+// Default Template Definitions
 template <typename OP>
 void print_vector(vector<OP> arr) {
     for (auto i : arr) {
@@ -72,17 +91,76 @@ void print_unordered_map(std::unordered_map<O, P> table) {
     std::cout << std::endl;
 }
 
+// New Templatate Definitions
 
-// solve
-void solve() {
 
+//##############################
+
+
+// Write below this line.
+void quadratic(double a, double b, double c) {
+    double discriminant = b*b - 4*a*c;
+    
+    if(discriminant >= 0) {
+        double ans1 = ((-1)*b + sqrt(discriminant)) / (2*a);
+        double ans2 = ((-1)*b - sqrt(discriminant)) / (2*a);
+
+        cout << "quadratic sol\n";
+        cout << "a= " << a << ", b= " << b << ", c= " << c << "\n";
+        cout << "x= " << ans1 << "  or  x= " << ans2 << "\n";
+    }
+    else {
+        cout << "quadratic: no solution\n";
+    }
+
+}
+long long nCr(double n, double r) {
+  if (r > n || r < 0 || n < 0) {
+    return 0;
+  }
+
+  long long result = 1;
+  for (int i = 0, j = r; i < r; i++, j--) {
+    result *= (n - i) / j;
+  }
+  return result;
+}
+
+double binomial(double p, double n, double r) {
+  double ans = nCr(n, r) * pow(p, r) * pow((1 - p), n-r);
+  return ans;
+}
+void f(vector<double> d) {
+    for (auto x : d) {
+        double ans =  pow(x, 4) - 8*x*x + 1; 
+        cout << "f(" << x << ") = " << ans << ",\t";
+    }
+    cout << endl;
+}
+void m1(vector<double> d) {
+    for (auto x : d) {
+        double ans = 4*pow(x, 3) - 16*x;
+        cout << "f'(" << x << ") = " << ans << ",\t";
+    }
+    cout << endl;
+}
+void m2(vector<double> d) {
+    for (auto x : d) {
+        double ans = 12*x*x - 16;
+        cout << "f''(" << x << ") = " << ans << ",\t";
+    }
+    cout << endl;
 }
 
 
 
+// solve
+void solve() {
+    
+}
 
 
-
+//##############################
 
 // MAIN
 int main() {
@@ -92,15 +170,26 @@ int main() {
     so the standard stream operators (<<) were never overloaded for it.
     */
     unsigned __int128 x = 4;
-    std::cout << x << " Hello world." << std::endl;
+    // std::cout << x << std::endl;
+    int arr[] = {1, 9, 7, 3, 2, 5};
+    *(arr + 2) = 6;
+    cout << *(arr + 2) << endl;
+
+    double d = 0.3333333333333;
+    Fraction f = limit_denominator(d);
+    cout << f << endl;
+
+    // Write below this line
 
 
     return 0;
 }
 
+//##############################
 
-// DEFINITIONS
+// Default Definitions
 std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
+    
     if (x == 0) {
         os << '0';
         return os;
@@ -118,8 +207,34 @@ std::ostream& operator<<(std::ostream& os, unsigned __int128 x) {
     os << s;
     return os;
 }
+std::ostream& operator<<(std::ostream& os, Fraction f) {
+    os << f.num << "/" << f.den << std::endl;
+    return os;
+}
+Fraction limit_denominator(double value, long long max_den) {
+    long long a = std::floor(value);
 
+    long long h1 = 1, k1 = 0;
+    long long h = a, k = 1;
 
+    double frac = value;
 
+    while ( std::fabs(value - static_cast<double>(h) / k) > 1e-12 && k < max_den ) {
+        frac = 1.0 / (frac - a);
+        a = std::floor(frac);
 
+        long long h2 = h1;
+        h1 = h;
+
+        long long k2 = k1;
+        k1 = k;
+
+        h = a * h1 + h2;
+        k = a * k1 + k2;
+    }
+
+    return {h, k};
+}
+
+// New Definitions
 
