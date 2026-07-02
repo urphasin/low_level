@@ -51,6 +51,9 @@ struct Fraction {
 };
 
 // New Classes and Structs
+class Queue {
+
+};
 
 //##############################
 
@@ -183,7 +186,7 @@ int main() {
     cout << f << endl;
 
     // Write below this line
-
+    Queue
 
     return 0;
 }
