@@ -186,7 +186,7 @@ int main() {
     cout << f << endl;
 
     // Write below this line
-    Queue
+    Queue q1;
 
     return 0;
 }
