@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 void printIntArray(int* arr, size_t size) {
     for(int i = 0; i < size; i++) {
@@ -8,6 +9,6 @@ void printIntArray(int* arr, size_t size) {
 }
 
 int main() {
-    int* arr = malloc(sizeof(int) * 10);
+    int* arr = (int*)malloc(sizeof(int) * 10);
     printIntArray(arr, 10);
 }
